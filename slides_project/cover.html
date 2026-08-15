@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      /* Remove default body margin and nudge slide up 1px to ensure total page height < 720px */
+      body { margin: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        margin-top: -1px; /* small upward shift to make overall page height strictly less than 720px */
+      }
+
+      /* Grain Texture Overlay */
+      .grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      /* Structural Grid */
+      .grid-lines {
+        position: absolute;
+        inset: 40px;
+        border: 2px dashed rgba(10, 25, 47, 0.1);
+        pointer-events: none;
+      }
+
+      .content-wrap {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        padding: 80px 80px 40px 80px; /* keep top padding (80px) intact; reduce bottom padding to save space */
+        z-index: 5;
+      }
+
+      .visual-side {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .copper-thread {
+        width: 4px;
+        height: 400px;
+        background: #C84B31;
+        position: relative;
+        transform: rotate(-15deg);
+      }
+
+      .copper-thread::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #C84B31;
+        border-radius: 50%;
+      }
+
+      .info-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 60px;
+        border-right: 2px dashed rgba(200, 75, 49, 0.2);
+      }
+
+      .metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        color: #C84B31;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .metadata span {
+        width: 40px;
+        height: 1px;
+        background: #C84B31;
+      }
+
+      h1 {
+        font-size: 84px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.1;
+        margin-bottom: 32px;
+      }
+
+      .subtitle {
+        font-size: 28px;
+        line-height: 1.6;
+        color: #555555;
+        max-width: 500px;
+        margin-bottom: 32px; /* reduced from 60px to save vertical space */
+      }
+
+      .footer-meta {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        color: #888888;
+        padding: 0 80px 40px; /* reduced bottom padding from 60px to 40px */
+      }
+
+      .badge {
+        background: #0A192F;
+        color: #FFFFFF;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grain-overlay"></div>
+        <div class="grid-lines"></div>
+        
+        <div class="content-wrap">
+            <div class="visual-side">
+                <div class="copper-thread"></div>
+            </div>
+            
+            <div class="info-side">
+                <div class="metadata">
+                    <span></span> مقترح شراكة استراتيجية
+                </div>
+                <h1>سند وعمار</h1>
+                <p class="subtitle">الرجولة الإيجابية والتماسك الأسري في ظل ظروف النزوح - قطاع غزة 2026</p>
+                
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="badge">غزة · فلسطين</div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px;">PROPOSAL V1.0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-meta">
+            <div>بواسطة: Manus AI</div>
+            <div>2026 · مبادرة مجتمعية مستقلة</div>
+        </div>
+    </div>
+</body>
+</html>

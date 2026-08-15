@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+      }
+.grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+.header-area {
+        padding-top: 60px;
+        padding-right: 80px;
+        padding-left: 80px;
+      }
+.metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #C84B31;
+        margin-bottom: 12px;
+      }
+h2 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+.horizontal-divider {
+        height: 2px;
+        background: #0A192F;
+        margin-bottom: 30px;
+      }
+.main-content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        padding-right: 80px;
+        padding-left: 80px;
+        flex: 1;
+        gap: 60px;
+      }
+.goals-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+.goal-item {
+        padding-top: 20px;
+        border-top: 1px dashed rgba(10, 25, 47, 0.2);
+      }
+.goal-item h3 {
+        font-size: 20px;
+        color: #C84B31;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+.goal-item p {
+        font-size: 17px;
+        color: #555555;
+        line-height: 1.6;
+      }
+.chart-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+.chart-container {
+        height: 350px;
+        width: 100%;
+        position: relative;
+      }
+.impact-summary {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+.impact-stat {
+        padding-top: 15px;
+        border-top: 2px solid #0A192F;
+      }
+.impact-stat span {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 32px;
+        font-weight: bold;
+        color: #C84B31;
+        display: block;
+      }
+.impact-stat label {
+        font-size: 14px;
+        color: #888888;
+        text-transform: uppercase;
+      }
+.footer-bar {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-right: 80px;
+        padding-left: 80px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #AAAAAA;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body><div class="slide-container">
+        <div class="grain-overlay"></div>
+<div class="header-area">
+            <div class="metadata">02 // الأهداف والأثر</div>
+            <h2>خلق تحول سلوكي مستدام وتعزيز التماسك الأسري</h2>
+            <div class="horizontal-divider"></div>
+        </div>
+<div class="main-content">
+            <div class="goals-list">
+                <div class="goal-item">
+                    <h3><i class="fas fa-home"></i> تخفيف الضغط الأسري</h3>
+                    <p>إعادة توزيع المسؤوليات اليومية داخل الأسرة النازحة عبر الشراكة والاحتواء العاطفي المتبادل.</p>
+                </div>
+                <div class="goal-item">
+                    <h3><i class="fas fa-users"></i> بناء وعي الشباب</h3>
+                    <p>تمكين الشباب والصبايا من أدوات التواصل الفعّال وإدارة الضغوط النفسية وبناء شبكات مساندة.</p>
+                </div>
+                <div class="goal-item">
+                    <h3><i class="fas fa-video"></i> صناعة المحتوى الداعم</h3>
+                    <p>إنتاج مواد توعوية رقمية تحاكي تفاصيل الحياة اليومية في الخيام وتعزز قيم السند.</p>
+                </div>
+                <div class="goal-item">
+                    <h3><i class="fas fa-chart-line"></i> تحقيق التحول السلوكي</h3>
+                    <p>ترسيخ ممارسات الإصغاء والشراكة كبدائل للتوتر الفردي، مع استهداف نسبة رضا 75%.</p>
+                </div>
+            </div>
+<div class="chart-side">
+                <div class="chart-container">
+                    <canvas id="impactChart" width="602" height="437" style="display: block; box-sizing: border-box; height: 349.6px; width: 481.6px; transform: translate(-16.0248px, -103.3px);"></canvas>
+                </div>
+                <div class="impact-summary">
+                    <div class="impact-stat">
+                        <span>+500</span>
+                        <label>مستفيد مباشر</label>
+                    </div>
+                    <div class="impact-stat">
+                        <span>+50,000</span>
+                        <label>وصول رقمي</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="footer-bar">
+            <div>سند وعمار: الرجولة الإيجابية والتماسك الأسري</div>
+            <div>صفحة 03</div>
+        </div>
+    </div>
+<script nonce="">
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['مستفيد مباشر', 'سفراء شباب', 'مقاطع فيديو', 'وصول رقمي (ألف)'],
+                datasets: [{
+                    label: 'الأثر المستهدف',
+                    data: [500, 10, 10, 50],
+                    backgroundColor: [
+                        '#0A192F',
+                        '#C84B31',
+                        '#0A192F',
+                        '#C84B31'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'IBM Plex Mono' } }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Noto Kufi Arabic', size: 14 } }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

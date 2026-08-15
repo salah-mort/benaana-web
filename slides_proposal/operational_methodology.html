@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans Arabic', sans-serif; margin: 0; padding: 0; }
+        .slide-container {
+            min-height: 720px;
+            background: #ffffff;
+            color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .header-bar { height: 8px; background: #1e3a8a; width: 100%; }
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-row {
+            border-right: 2px solid #e2e8f0;
+            padding-right: 1rem; /* reduced inner padding to save space */
+            position: relative;
+        }
+        .step-row::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: #f59e0b;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-bar"></div>
+        <div class="px-16 pt-12">
+            <h2 class="text-4xl font-bold mb-8 border-r-4 border-blue-800 pr-6">منهجية العمل: 6 جلسات تطبيقية</h2>
+            
+            <div class="grid grid-cols-3 gap-x-8 gap-y-4 mt-6">
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">1. التهدئة الذاتية</h3>
+                    <p class="text-gray-600">تقنية «توقف – تنفس – اختر» لإدارة الغضب والضغط اللحظي.</p>
+                </div>
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">2. التواصل العاطفي</h3>
+                    <p class="text-gray-600">استبدال اللوم بأسلوب «رسائل أنا» والتعبير عن الاحتياج بوضوح.</p>
+                </div>
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">3. الإنصات النشط</h3>
+                    <p class="text-gray-600">مهارات الاستماع الفعال لبناء جسور الثقة مع الأطفال والزوجة.</p>
+                </div>
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">4. الشراكة في الرعاية</h3>
+                    <p class="text-gray-600">إعادة توزيع الأدوار اليومية كجزء من مسؤولية الأب الإيجابية.</p>
+                </div>
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">5. الحزم دون عنف</h3>
+                    <p class="text-gray-600">بدائل التأديب الإيجابي ووضع الحدود دون اللجوء للأذى البدني.</p>
+                </div>
+                <div class="step-row">
+                    <h3 class="font-bold text-xl mb-1 text-blue-900">6. خطة الأمان الأسري</h3>
+                    <p class="text-gray-600">إعداد خطة سلوكية نهائية ومراجعة مخرجات التعلم والاستدامة.</p>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-blue-50 border border-blue-100">
+                <p class="text-lg text-blue-800 font-medium">
+                    تنفذ الجلسات بمجموعات صغيرة (20 مشاركاً) لضمان الخصوصية والتركيز على التطبيق العملي لا المحاضرة النظرية.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

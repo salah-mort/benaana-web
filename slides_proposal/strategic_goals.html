@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans Arabic', sans-serif; margin: 0; padding: 0; }
+        .slide-container {
+            min-height: 720px;
+            background: #f1f5f9;
+            color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .header-bar { height: 8px; background: #1e3a8a; width: 100%; }
+        .goal-number { font-size: 3.5rem; font-weight: 800; color: #f59e0b; line-height: 1; }
+        .goal-card { background: white; border-top: 4px solid #1e3a8a; padding-top: 1rem; padding-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-bar"></div>
+        <div class="px-10 pt-16">
+            <h2 class="text-4xl font-bold mb-12 border-r-4 border-yellow-500 pr-6">أهدافنا الاستراتيجية</h2>
+
+            <div class="grid grid-cols-2 gap-6">
+                <div class="goal-card px-6">
+                    <div class="flex items-center justify-between">
+                        <div class="goal-number">60</div>
+                        <h3 class="text-xl font-bold mr-4">تمكين الآباء</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mt-3">
+                        استهداف 60 أباً ومقدّم رعاية في مخيمات النزوح عبر 6 جلسات تدريبية تطبيقية مكثفة.
+                    </p>
+                </div>
+
+                <div class="goal-card px-6">
+                    <div class="flex items-center justify-between">
+                        <div class="goal-number">60</div>
+                        <h3 class="text-xl font-bold mr-4">خطط عمل أسرية</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mt-3">
+                        إعداد وتطبيق 60 خطة عمل أسرية سلوكية تترجم التعلم إلى واقع داخل المسكن المؤقت.
+                    </p>
+                </div>
+
+                <div class="goal-card px-6">
+                    <div class="flex items-center justify-between">
+                        <div class="goal-number">10</div>
+                        <h3 class="text-xl font-bold mr-4">سفراء بيننا</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mt-3">
+                        تأهيل 6 إلى 10 سفراء محليين من الآباء الفاعلين لضمان استدامة الأثر والإحالة المجتمعية.
+                    </p>
+                </div>
+
+                <div class="goal-card px-6">
+                    <div class="flex items-center justify-between">
+                        <div class="goal-number">70%</div>
+                        <h3 class="text-xl font-bold mr-4">تحسن سلوكي</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mt-3">
+                        تحقيق تحسن ملموس في مؤشرات الوعي والممارسة الوالدية الإيجابية لدى 70% من المشاركين.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

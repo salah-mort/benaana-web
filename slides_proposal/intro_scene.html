@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بيننا — الغلاف</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { --ink:#241d35; --paper:#f6f0e7; --lime:#d6ef4b; --coral:#f26f61; --lilac:#9c88ff; --muted:#c9bfd7; }
+    body { margin:0; background:#11101a; font-family:Arial, "Noto Sans Arabic", sans-serif; }
+    .slide-container { min-height:720px; width:1280px; background:var(--ink); color:var(--paper); position:relative; overflow:hidden; display:flex; flex-direction:column; padding:54px 68px 0; }
+    .grain { position:absolute; inset:0; opacity:.14; background-image:radial-gradient(#fff 0.7px, transparent .7px); background-size:7px 7px; pointer-events:none; }
+    .stripe { position:absolute; top:0; bottom:0; left:0; width:18px; background:var(--lime); }
+    .stripe::after { content:""; position:absolute; top:126px; left:18px; width:14px; height:270px; background:var(--coral); }
+    .topline { display:flex; justify-content:space-between; align-items:center; font-size:14px; letter-spacing:.08em; color:var(--muted); position:relative; z-index:1; }
+    .eyebrow { color:var(--lime); font-weight:700; }
+    .edition { border-bottom:1px solid var(--lilac); padding-bottom:8px; }
+    .hero { flex:1; display:grid; grid-template-columns:1.04fr .96fr; gap:62px; align-items:center; position:relative; z-index:1; }
+    .copy { padding-top:22px; }
+    .mark { width:58px; height:10px; background:var(--coral); margin-bottom:30px; }
+    h1 { font-size:126px; line-height:.9; margin:0 0 24px; letter-spacing:-.07em; color:var(--paper); }
+    .subtitle { font-size:28px; line-height:1.45; max-width:560px; margin:0 0 28px; color:#f5dbcf; font-weight:700; }
+    .description { font-size:18px; line-height:1.75; max-width:570px; color:var(--muted); margin:0; }
+    .stats { display:flex; gap:24px; margin-top:34px; flex-wrap:wrap; }
+    .stat { border-top:2px solid var(--lime); padding-top:9px; min-width:130px; }
+    .stat strong { display:block; font-size:28px; color:var(--lime); }
+    .stat span { display:block; font-size:13px; color:var(--muted); margin-top:4px; }
+    .visual { position:relative; min-height:480px; display:flex; align-items:center; justify-content:center; }
+    .visual::before { content:""; position:absolute; width:390px; height:480px; background:var(--lilac); transform:rotate(-8deg); right:54px; top:12px; }
+    .visual::after { content:""; position:absolute; width:390px; height:480px; background:var(--lime); transform:rotate(6deg); right:12px; top:36px; }
+    .image-frame { position:relative; z-index:2; width:420px; height:494px; background:var(--paper); padding:14px; transform:rotate(-2deg); }
+    .image-frame img { width:100%; height:100%; object-fit:contain; display:block; background:#d6d7c4; }
+    .image-label { position:absolute; right:-20px; bottom:22px; background:var(--ink); color:var(--lime); padding:10px 16px; font-size:13px; letter-spacing:.08em; }
+    .footer { position:relative; z-index:1; border-top:1px solid rgba(246,240,231,.35); padding:18px 0 24px; display:flex; justify-content:space-between; color:var(--muted); font-size:13px; }
+    .footer b { color:var(--paper); }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="grain"></div><div class="stripe"></div>
+    <div class="topline"><span class="eyebrow">مقترح شراكة ميدانية</span><span class="edition">غزة · 2026</span></div>
+    <div class="hero">
+      <section class="copy">
+        <div class="mark"></div>
+        <h1>بيننا</h1>
+        <p class="subtitle">آباء يبنون بيتاً آمناً رغم الحرب</p>
+        <p class="description">تدخل وجاهي يضع الأب في قلب التغيير، ويحوّل الرغبة في حماية الأسرة إلى أدوات يومية في التهدئة، والإنصات، وتقاسم الرعاية، والحزم دون عنف.</p>
+        <div class="stats">
+          <div class="stat"><strong>60</strong><span>أباً ومقدّم رعاية</span></div>
+          <div class="stat"><strong>3</strong><span>مجموعات حضورية</span></div>
+          <div class="stat"><strong>6</strong><span>جلسات تطبيقية</span></div>
+          <div class="stat"><strong>$4,000</strong><span>ميزانية التنفيذ</span></div>
+        </div>
+      </section>
+      <aside class="visual">
+        <div class="image-frame"><img src="/home/ubuntu/webdev-static-assets/binna-cover-2026.png" alt="أب مع أطفاله في مساحة إيواء" /><span class="image-label">البيت يبدأ من بيننا</span></div>
+      </aside>
+    </div>
+    <div class="footer"><span>مبادرة ميدانية للأب والأسرة</span><b>فريق بيننا للحماية الأسرية</b></div>
+  </div>
+</body>
+</html>

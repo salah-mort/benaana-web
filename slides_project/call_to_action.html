@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body { margin: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -1px; /* shift up by 1px so bottom < 720px without changing min-height */
+      }
+
+      .grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .grid-lines {
+        position: absolute;
+        inset: 40px;
+        border: 2px dashed rgba(10, 25, 47, 0.1);
+        pointer-events: none;
+      }
+
+      .metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        color: #C84B31;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        z-index: 5;
+      }
+
+      h2 {
+        font-size: 64px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 14px; /* slightly reduced spacing to save vertical space */
+        max-width: 1000px;
+        z-index: 5;
+      }
+
+      .partnership-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px; /* reduced gap to compress height */
+        width: 1000px;
+        margin-bottom: 12px; /* reduced spacing */
+        z-index: 5;
+      }
+
+      .option-card {
+        padding-top: 8px; /* reduced inner padding */
+        border-top: 2px solid #0A192F;
+      }
+
+      .option-card i {
+        font-size: 24px;
+        color: #C84B31;
+        margin-bottom: 8px;
+      }
+
+      .option-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0A192F;
+        margin-bottom: 6px;
+      }
+
+      .option-card p {
+        font-size: 16px;
+        color: #666666;
+        line-height: 1.6;
+      }
+
+      .closing-quote {
+        font-size: 28px;
+        font-weight: 700;
+        color: #C84B31;
+        margin-bottom: 12px; /* reduced spacing */
+        z-index: 5;
+      }
+
+      .copper-thread-final {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 8px;
+        background: #C84B31;
+      }
+
+      .contact-info {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        color: #888888;
+        z-index: 5;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grain-overlay"></div>
+        <div class="grid-lines"></div>
+        
+        <div class="metadata">الخاتمة // دعوة للشراكة</div>
+        <h2>الاستثمار في وعي الإنسان هو الضمانة الحقيقية لصمود المجتمع</h2>
+        
+        <div class="partnership-options">
+            <div class="option-card">
+                <i class="fas fa-donate"></i>
+                <h3>دعم الميزانية</h3>
+                <p>تمويل الميزانية التشغيلية للمبادرة لضمان الوصول الميداني لـ 500 مستفيد.</p>
+            </div>
+            <div class="option-card">
+                <i class="fas fa-broadcast-tower"></i>
+                <h3>تبني الحملة</h3>
+                <p>رعاية إنتاج وبث محاور الحملة الرقمية العشرة عبر منصاتكم الإعلامية.</p>
+            </div>
+            <div class="option-card">
+                <i class="fas fa-handshake"></i>
+                <h3>الدعم الاستشاري</h3>
+                <p>توفير الخبرات الفنية والنفسية لتعزيز جودة المحتوى التدريبي والميداني.</p>
+            </div>
+        </div>
+
+        <div class="closing-quote">
+            "خيط واحد يربط البيوت ببعضها البعض.. شاركونا صناعة الأثر"
+        </div>
+
+        <div class="contact-info">
+            فريق مبادرة سند وعمار · غزة 2026 · sanad-ammar.ps
+        </div>
+
+        <div class="copper-thread-final"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+{
+  "project_info": {
+    "title": "في الخيمة، يبدأ السؤال: استجابة إنسانية لواقع غزة القاسي",
+    "created": 1786822893.077,
+    "last_updated": 1786829584.12,
+    "total_slides": 11
+  },
+  "slides": [
+    {
+      "id": "intro_scene",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "problem_analysis",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "gap_analysis",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "solution",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "training_path",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "theory_of_change",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "impact_statistics",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "media",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "budget",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "protection",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "vision_mission",
+      "state": "deleted",
+      "pageNum": -1
+    },
+    {
+      "id": "strategic_goals",
+      "state": "deleted",
+      "pageNum": -1
+    },
+    {
+      "id": "operational_methodology",
+      "state": "deleted",
+      "pageNum": -1
+    },
+    {
+      "id": "timeline_budget",
+      "state": "deleted",
+      "pageNum": -1
+    }
+  ],
+  "outline": [
+    {
+      "id": "intro_scene",
+      "title": "في الخيمة، يبدأ السؤال: استجابة إنسانية لواقع غزة القاسي",
+      "summary": "عرض المشهد الإنساني في غزة والحاجة الملحة لدعم المعيلين والشباب في ظل الضغوط النفسية المتزايدة.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "problem_analysis",
+      "title": "تحديات الرجولة في الأزمات: كسر النمطية وحماية الروابط الأسرية",
+      "summary": "تحليل المشكلة من كبت المشاعر وضغوط الإعالة إلى غياب مساحات الحوار الآمنة.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "gap_analysis",
+      "title": "الفجوة",
+      "summary": "توضح الفجوة بين رغبة الآباء في حماية أسرهم وبين توفر المساحة الآمنة والتدريب العملي والمتابعة.",
+      "image_plan": "لا توجد صورة مطلوبة؛ استخدم تخطيطاً تحريرياً مع فجوة بصرية بين النية والأداة."
+    },
+    {
+      "id": "solution",
+      "title": "الحل",
+      "summary": "تدخل ميداني وجاهي من مجموعات صغيرة وتيسير محترم وأدوات قابلة للتطبيق داخل البيت.",
+      "image_plan": "استخدم صورة الغلاف الجديدة أو صورة محلية مناسبة إن كانت متاحة؛ تجنب تكرار الصورة داخل الشريحة نفسها."
+    },
+    {
+      "id": "training_path",
+      "title": "المسار التدريبي",
+      "summary": "ست جلسات تطبيقية تبدأ بفهم الضغط والتهدئة وتنتهي بخطة بيت أكثر أماناً.",
+      "image_plan": "لا توجد صورة مطلوبة؛ استخدم مساراً زمنياً واضحاً من ست محطات."
+    },
+    {
+      "id": "theory_of_change",
+      "title": "منطق التغيير",
+      "summary": "نربط بين الجلسة والممارسة والمتابعة: يلاحظ الأب، يهدأ، يقترب، ثم ينقل أداة نافعة.",
+      "image_plan": "لا توجد صورة مطلوبة؛ استخدم مخططاً متدرجاً يوضح المدخلات والأنشطة والمخرجات والأثر."
+    },
+    {
+      "id": "impact_statistics",
+      "title": "مؤشرات الأثر: تحول ملموس في السلوك والمشاركة الأسرية المتوقعة",
+      "summary": "عرض إحصائيات الأثر المتوقع وتوزيع المستفيدين.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "media",
+      "title": "الميديا",
+      "summary": "قصة ميدانية ومواد تعريفية تحفظ كرامة المشاركين وتشرح الفكرة للشركاء دون استبدال العمل الوجاهي.",
+      "image_plan": "استخدم الصورة الجديدة كتفصيل تحريري واحد فقط إذا كانت مناسبة، دون صور نمطية أو ادعاء توثيق حقيقي."
+    },
+    {
+      "id": "budget",
+      "title": "الميزانية",
+      "summary": "توزيع واضح لميزانية 4,000 دولار على الجلسات والمواد والتيسير والدعم والتنقل والقياس والتوثيق.",
+      "image_plan": "لا توجد صورة مطلوبة؛ استخدم توزيعاً رقمياً موثقاً من ملف بيننا دون اختلاق نسب."
+    },
+    {
+      "id": "protection",
+      "title": "الحماية",
+      "summary": "الخصوصية والموافقة وقواعد السلوك والإحالات الآمنة شروط تسبق النشاط وترافقه.",
+      "image_plan": "لا توجد صورة مطلوبة؛ استخدم بنية مبادئ حماية واضحة ومختصرة."
+    },
+    {
+      "id": "call_to_action",
+      "title": "كن شريكاً في السند: معاً نعيد بناء الإنسان قبل المكان",
+      "summary": "دعوة للجهات الداعمة والشركاء للانضمام للمبادرة ودعم مسيرة التماسك المجتمعي.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}

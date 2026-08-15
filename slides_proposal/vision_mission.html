@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans Arabic', sans-serif; margin: 0; padding: 0; }
+        .slide-container {
+            min-height: 720px;
+            background: #ffffff;
+            color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .header-bar {
+            height: 8px;
+            background: #1e3a8a;
+            width: 100%;
+        }
+        .vision-section {
+            background: #eff6ff;
+            padding-top: 3rem;
+        }
+        .mission-section {
+            background: #ffffff;
+            padding-top: 3rem;
+        }
+        .accent-border {
+            border-right: 4px solid #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-bar"></div>
+        <div class="px-16 pt-16 mb-8">
+            <h2 class="text-4xl font-bold accent-border pr-6">رؤيتنا ورسالتنا</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 flex-grow">
+            <div class="vision-section px-16 pb-16">
+                <h3 class="text-3xl font-bold mb-6 text-blue-900">الرؤية</h3>
+                <p class="text-2xl leading-relaxed text-blue-800">
+                    مجتمع غزي متماسك، يقوده آباء ومقدمو رعاية يمثلون سنداً حقيقياً وأماناً مستداماً لأسرهم، محولين ضغوط الحرب إلى طاقة احتواء وشراكة.
+                </p>
+                <div class="mt-12 pt-8 border-t border-blue-200">
+                    <p class="text-lg font-bold text-blue-700">القيمة الأساسية</p>
+                    <p class="text-xl text-blue-600 italic">"الاحترام، المسؤولية، والتعاطف"</p>
+                </div>
+            </div>
+            
+            <div class="mission-section px-16 pb-16">
+                <h3 class="text-3xl font-bold mb-6 text-blue-900">الرسالة</h3>
+                <p class="text-2xl leading-relaxed text-gray-700">
+                    تمكين الآباء في مخيمات النزوح من ممارسة "الرجولة الإيجابية" كفعل حماية يومي، عبر تزويدهم بأدوات سلوكية عملية للتهدئة والتواصل الصحي ونبذ العنف، لضمان استقرار الأسرة وحماية الأطفال.
+                </p>
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <p class="text-lg font-bold text-blue-700">منهجنا</p>
+                    <p class="text-xl text-gray-600">التدخل النفسي الاجتماعي الميداني المباشر</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

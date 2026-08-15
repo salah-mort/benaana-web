@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans Arabic', sans-serif; margin: 0; padding: 0; }
+        .slide-container {
+            min-height: 720px;
+            background: #ffffff;
+            color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .header-bar { height: 8px; background: #1e3a8a; width: 100%; }
+        .container-inner { padding: 48px 32px 16px 32px; }
+        .stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px; }
+        .stage { background: #ebf8ff; padding: 8px; border-top: 2px solid #1e40af; }
+        h2 { margin-bottom: 12px; padding-right: 24px; border-right: 4px solid #08306a; }
+        h3 { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+        th { background: #f1f5f9; color: #1e3a8a; text-align: right; padding: 8px; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 8px; border-bottom: 1px solid #e2e8f0; }
+        .budget-total { background: #1e3a8a; color: white; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-bar"></div>
+        <div class="container-inner">
+            <h2 class="text-4xl font-bold">خطة التنفيذ والميزانية الميدانية</h2>
+            
+            <div class="stages">
+                <div class="stage">
+                    <h4 class="font-bold">المرحلة 1</h4>
+                    <p class="text-sm text-gray-600">التخطيط وتجهيز المساحات.</p>
+                </div>
+                <div class="stage">
+                    <h4 class="font-bold">المرحلة 2</h4>
+                    <p class="text-sm text-gray-600">استقطاب وقياس قبلي.</p>
+                </div>
+                <div class="stage">
+                    <h4 class="font-bold">المرحلة 3</h4>
+                    <p class="text-sm text-gray-600">تنفيذ الجلسات والمتابعة.</p>
+                </div>
+                <div class="stage">
+                    <h4 class="font-bold">المرحلة 4</h4>
+                    <p class="text-sm text-gray-600">القياس البعدي والتقرير.</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-blue-900">الميزانية التقديرية (4,000 دولار)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>البند الأساسي</th>
+                        <th>الوصف</th>
+                        <th>التكلفة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-bold">الأنشطة الميدانية</td>
+                        <td>ضيافة وأدوات تدريبية أساسية.</td>
+                        <td>1,500$</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">التنسيق والتيسير</td>
+                        <td>مكافآت الميسرين ومنسق المشروع.</td>
+                        <td>1,200$</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">التوثيق والتقييم</td>
+                        <td>أدوات قياس وتصوير محدود.</td>
+                        <td>800$</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">النثريات والطوارئ</td>
+                        <td>تنقلات وتغطية لوجستية.</td>
+                        <td>500$</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td colspan="2" class="text-left">الإجمالي العام</td>
+                        <td>4,000$</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+      }
+.grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+.header-area {
+        padding-top: 60px;
+        padding-right: 80px;
+        padding-left: 80px;
+      }
+.metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #C84B31;
+        margin-bottom: 12px;
+      }
+h2 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+.horizontal-divider {
+        height: 2px;
+        background: #0A192F;
+        margin-bottom: 30px;
+      }
+.main-content {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        padding-right: 80px;
+        padding-left: 80px;
+        flex: 1;
+        gap: 60px;
+      }
+.table-side {
+        display: flex;
+        flex-direction: column;
+      }
+table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+th {
+        text-align: right;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #0A192F;
+        color: #0A192F;
+        font-size: 18px;
+      }
+td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed rgba(10, 25, 47, 0.2);
+        font-size: 17px;
+        vertical-align: top;
+      }
+.price-cell {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: bold;
+        color: #C84B31;
+        text-align: left;
+        font-size: 20px;
+      }
+.total-row td {
+        border-bottom: none;
+        padding-top: 30px;
+        font-weight: 900;
+        font-size: 24px;
+        color: #0A192F;
+      }
+.chart-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px dashed rgba(200, 75, 49, 0.2);
+        padding-right: 40px;
+      }
+.chart-container {
+        height: 380px;
+        width: 380px;
+        position: relative;
+      }
+.chart-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+.chart-label span {
+        display: block;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 36px;
+        font-weight: 900;
+        color: #0A192F;
+      }
+.chart-label label {
+        font-size: 14px;
+        color: #888888;
+        text-transform: uppercase;
+      }
+.footer-bar {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-right: 80px;
+        padding-left: 80px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #AAAAAA;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body><div class="slide-container">
+        <div class="grain-overlay"></div>
+<div class="header-area">
+            <div class="metadata">05 // الشفافية المالية</div>
+            <h2>توزيع الميزانية التشغيلية <br>للمبادرة (4,000 دولار أمريكي)</h2>
+            <div class="horizontal-divider"></div>
+        </div>
+<div class="main-content">
+            <div class="chart-side">
+                <div class="chart-container" style="transform: translate(20.7938px, -114.6px);">
+                    <canvas id="budgetChart" width="475" height="475" style="display: block; box-sizing: border-box; height: 380px; width: 380px; transform: translate(2.7e-05px, 1.28901px);"></canvas>
+                    <div class="chart-label">
+                        <span>$4,000</span>
+                        <label>إجمالي الميزانية</label>
+                    </div>
+                </div>
+            </div>
+<div class="table-side">
+                <table style="transform: translate(22.2566px, -68.5502px);">
+                    <thead>
+                        <tr>
+                            <th>البند الرئيسي</th>
+                            <th style="text-align: left;">التكلفة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>التيسير الميداني واللقاءات</strong><br>
+                                <small style="color: #888888;">مكافآت الميسرين، تجهيز المساحات، والضيافة لـ 12 جلسة.</small>
+                            </td>
+                            <td class="price-cell">$1,600</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>إنتاج الحملة الرقمية</strong><br>
+                                <small style="color: #888888;">تصوير وإنتاج 10 مقاطع فيديو قصيرة والترويج الرقمي.</small>
+                            </td>
+                            <td class="price-cell">$1,200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>المواد التدريبية واللوجستيات</strong><br>
+                                <small style="color: #888888;">طباعة الأدلة الإرشادية، بطاقات التوعية، وتأمين التنقلات.</small>
+                            </td>
+                            <td class="price-cell">$800</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>التقييم والطوارئ</strong><br>
+                                <small style="color: #888888;">أدوات القياس، توثيق الأثر، ومخصصات الطوارئ الميدانية.</small>
+                            </td>
+                            <td class="price-cell">$400</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>المجموع الكلي</td>
+                            <td class="price-cell" style="color: #0A192F;">$4,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<div class="footer-bar">
+            <div>سند وعمار: الرجولة الإيجابية والتماسك الأسري</div>
+            <div>صفحة 06</div>
+        </div>
+    </div>
+<script>(function() {
+const ctx = document.getElementById('budgetChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['التيسير الميداني', 'الحملة الرقمية', 'اللوجستيات', 'التقييم والطوارئ'],
+                datasets: [{
+                    data: [1600, 1200, 800, 400],
+                    backgroundColor: [
+                        '#0A192F',
+                        '#C84B31',
+                        '#555555',
+                        '#AAAAAA'
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+})();</script>
+</body>
+</html>

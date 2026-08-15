@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body { margin: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .header-area {
+        padding-top: 60px; /* keep as required */
+        padding-right: 60px;
+        padding-left: 60px;
+      }
+
+      .metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #C84B31;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 18px;
+      }
+
+      .horizontal-divider {
+        height: 2px;
+        background: #0A192F;
+        margin-bottom: 30px;
+      }
+
+      .tracks-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-right: 60px;
+        padding-left: 60px;
+        flex: 1;
+      }
+
+      .track-col {
+        padding-right: 20px;
+        padding-left: 20px;
+        border-left: 2px dashed rgba(10, 25, 47, 0.1);
+      }
+
+      .track-col:last-child {
+        border-left: none;
+      }
+
+      .track-icon {
+        font-size: 32px;
+        color: #C84B31;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #0A192F;
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+
+      .track-desc {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555555;
+        margin-bottom: 18px;
+      }
+
+      .track-features {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .track-features li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-right: 16px;
+        position: relative;
+        color: #444444;
+      }
+
+      .track-features li::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 8px;
+        height: 2px;
+        background: #C84B31;
+      }
+
+      .copper-line-bottom {
+        position: absolute;
+        bottom: 80px;
+        right: 60px;
+        left: 60px;
+        height: 1px;
+        background: rgba(200, 75, 49, 0.3);
+      }
+
+      .footer-bar {
+        padding-top: 14px;
+        padding-bottom: 12px;
+        padding-right: 60px;
+        padding-left: 60px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #AAAAAA;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grain-overlay"></div>
+        
+        <div class="header-area">
+            <div class="metadata">03 // مسارات المبادرة</div>
+            <h2>هيكل تكاملي يضمن شمولية الأثر المجتمعي</h2>
+            <div class="horizontal-divider"></div>
+        </div>
+
+        <div class="tracks-grid">
+            <div class="track-col">
+                <div class="track-icon"><i class="fas fa-comments"></i></div>
+                <h3>ديوان السند</h3>
+                <p class="track-desc">مساحات نقاش آمنة مخصصة للرجال والشباب لتبادل الخبرات وإدارة الضغوط النفسية.</p>
+                <ul class="track-features">
+                    <li>التعبير عن المشاعر دون خوف</li>
+                    <li>إدارة الغضب والتوتر الميداني</li>
+                    <li>القيادة بالقدوة والرحمة</li>
+                </ul>
+            </div>
+
+            <div class="track-col">
+                <div class="track-icon"><i class="fas fa-home"></i></div>
+                <h3>أعمدة البيت</h3>
+                <p class="track-desc">جلسات إرشادية تفاعلية تجمع الأسر لتعزيز آليات الصمود والتماسك الداخلي.</p>
+                <ul class="track-features">
+                    <li>اتخاذ القرار المشترك</li>
+                    <li>تخفيف التوتر اليومي في النزوح</li>
+                    <li>حماية فضاء البيت النفسي</li>
+                </ul>
+            </div>
+
+            <div class="track-col">
+                <div class="track-icon"><i class="fas fa-venus"></i></div>
+                <h3>شريكات الوعي</h3>
+                <p class="track-desc">مسارات حوارية تشرك الصبايا والقيادات النسوية في صياغة مفاهيم الدعم المتبادل.</p>
+                <ul class="track-features">
+                    <li>تصحيح الصور النمطية</li>
+                    <li>بناء شبكات مساندة مجتمعية</li>
+                    <li>صياغة أدوات الوعي الأسري</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copper-line-bottom"></div>
+
+        <div class="footer-bar">
+            <div>سند وعمار: الرجولة الإيجابية والتماسك الأسري</div>
+            <div>صفحة 04</div>
+        </div>
+    </div>
+</body>
+</html>

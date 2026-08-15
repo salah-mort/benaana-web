@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      /* remove default body margin to avoid the 8px gap */
+      html, body { margin: 0; }
+
+      .slide-container {
+        width: 1280px;
+        min-height: 720px; /* keep as required */
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .header-area {
+        padding-top: 60px; /* preserve title top padding */
+        padding-right: 60px; /* slightly reduced horizontal padding */
+        padding-left: 60px;
+      }
+
+      .metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #C84B31;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .horizontal-divider {
+        height: 2px;
+        background: #0A192F;
+        margin-bottom: 16px; /* reduced from 40 -> saves vertical space */
+      }
+
+      .risks-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-right: 60px;
+        padding-left: 60px;
+        flex: 1;
+        gap: 0;
+      }
+
+      .risk-pillar {
+        padding-right: 20px;
+        padding-left: 20px;
+        border-left: 2px dashed rgba(10, 25, 47, 0.1);
+      }
+
+      .risk-pillar:last-child {
+        border-left: none;
+      }
+
+      .pillar-icon {
+        font-size: 32px;
+        color: #C84B31;
+        margin-bottom: 18px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #0A192F;
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+
+      .pillar-desc {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555555;
+        margin-bottom: 12px; /* reduced from 30 */
+      }
+
+      .strategy-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .strategy-list li {
+        font-size: 16px;
+        margin-bottom: 8px; /* reduced from 12 */
+        padding-right: 20px;
+        position: relative;
+        color: #444444;
+      }
+
+      .strategy-list li::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 8px;
+        height: 2px;
+        background: #C84B31;
+      }
+
+      .resilience-badge {
+        position: absolute;
+        bottom: 72px; /* moved up from 100px to reduce overlap and overall height */
+        left: 60px;
+        background: #0A192F;
+        color: #FFFFFF;
+        padding: 12px 24px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .footer-bar {
+        padding-top: 12px; /* reduced from 20 */
+        padding-bottom: 12px; /* reduced from 40 */
+        padding-right: 60px;
+        padding-left: 60px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #AAAAAA;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grain-overlay"></div>
+        
+        <div class="header-area">
+            <div class="metadata">06 // المرونة الميدانية</div>
+            <h2>جاهزية كاملة للتكيف مع تقلبات الأوضاع الأمنية</h2>
+            <div class="horizontal-divider"></div>
+        </div>
+
+        <div class="risks-grid">
+            <div class="risk-pillar">
+                <div class="pillar-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>البدائل الرقمية الآمنة</h3>
+                <p class="pillar-desc">التحول الفوري للعمل الرقمي عند تعذر اللقاءات الوجاهية لضمان استمرار الدعم.</p>
+                <ul class="strategy-list">
+                    <li>مجموعات تراسل مغلقة وآمنة</li>
+                    <li>جلسات إرشادية فردية عن بُعد</li>
+                    <li>محتوى توعوي قابل للمشاركة</li>
+                </ul>
+            </div>
+
+            <div class="risk-pillar">
+                <div class="pillar-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>اللامركزية في التنفيذ</h3>
+                <p class="pillar-desc">توزيع الصلاحيات على قادة محليين لضمان النشاط في كل منطقة بشكل مستقل.</p>
+                <ul class="strategy-list">
+                    <li>اعتماد سفراء سند في كل مخيم</li>
+                    <li>فرق عمل ميدانية مصغرة</li>
+                    <li>استقلالية القرار التشغيلي</li>
+                </ul>
+            </div>
+
+            <div class="risk-pillar">
+                <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>بروتوكولات الحماية</h3>
+                <p class="pillar-desc">خطط بديلة للمساحات الآمنة وتوقيتات الجلسات تتناسب مع تقييم المخاطر.</p>
+                <ul class="strategy-list">
+                    <li>تقييم أمني يومي للمواقع</li>
+                    <li>تغيير مرن لمواعيد اللقاءات</li>
+                    <li>تأمين مسارات وصول المشاركين</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resilience-badge">ADAPTIVE FIELD STRATEGY // GAZA 2026</div>
+
+        <div class="footer-bar">
+            <div>سند وعمار: الرجولة الإيجابية والتماسك الأسري</div>
+            <div>صفحة 07</div>
+        </div>
+    </div>
+</body>
+</html>

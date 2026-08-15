@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .header-area {
+        padding-top: 60px; /* keep upper padding per requirement */
+        padding-right: 80px;
+        padding-left: 80px;
+      }
+
+      .metadata {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #C84B31;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #0A192F;
+        line-height: 1.2;
+        margin-bottom: 16px; /* reduced from 24 */
+        max-width: 900px;
+      }
+
+      .horizontal-divider {
+        height: 2px;
+        background: #0A192F;
+        margin-bottom: 20px; /* reduced from 40 */
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-right: 80px;
+        padding-left: 80px;
+        flex: 1;
+      }
+
+      .context-column {
+        padding-left: 24px; /* reduced horizontal padding */
+        border-left: 2px dashed rgba(10, 25, 47, 0.1);
+      }
+
+      .challenge-column {
+        padding-right: 24px; /* reduced horizontal padding */
+      }
+
+      h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #C84B31;
+        margin-bottom: 12px; /* reduced from 20 */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      p {
+        font-size: 19px;
+        line-height: 1.8;
+        color: #444444;
+        margin-bottom: 12px; /* reduced from 24 */
+      }
+
+      .insight-box {
+        padding-top: 12px; /* kept compact */
+        border-top: 1px solid #EEEEEE;
+        margin-top: 12px;
+      }
+
+      .insight-box strong {
+        color: #0A192F;
+        display: block;
+        margin-bottom: 4px; /* reduced from 8 */
+      }
+
+      .footer-bar {
+        padding-top: 12px; /* reduced to shrink footer height */
+        padding-bottom: 12px; /* reduced to shrink footer height */
+        padding-right: 80px;
+        padding-left: 80px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: #AAAAAA;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grain-overlay"></div>
+        
+        <div class="header-area">
+            <div class="metadata">01 // السياق والتحدي</div>
+            <h2>ضغوط النزوح تفرض واقعاً جديداً يتطلب استجابة إنسانية أعمق</h2>
+            <div class="horizontal-divider"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="challenge-column">
+                <h3><i class="fas fa-exclamation-triangle"></i> التحدي الميداني</h3>
+                <p>بيئات النزوح ومراكز الإيواء في غزة تضع الرجال والشباب تحت ضغوط نفسية هائلة تجمع بين العجز المادي وضغط الصورة النمطية للرجولة القائمة على "الصلابة المطلقة".</p>
+                <div class="insight-box">
+                    <strong>تفكك التماسك الداخلي</strong>
+                    <p>هذا المناخ يضاعف العبء النفسي على الأسر ويزيد من احتمالات التصدع الأسري نتيجة غياب قنوات التعبير الآمنة عن الألم والاحتياج.</p>
+                </div>
+            </div>
+
+            <div class="context-column">
+                <h3><i class="fas fa-hand-holding-heart"></i> الحاجة للاستجابة</h3>
+                <p>هناك حاجة ملحة لتحويل مفهوم الرجولة من "السيطرة والقوة البدنية" إلى "الرعاية والرحمة والمشاركة" كأدوات صمود حقيقية في ظل الحرب.</p>
+                <div class="insight-box">
+                    <strong>الفراغ النوعي</strong>
+                    <p>مبادرة "سند وعمار" تملأ فراغاً نوعياً تفتقده البرامج الإغاثية التقليدية، عبر التركيز على البعد النفسي والاجتماعي للرجل كركيزة لاستقرار الأسرة.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <div>سند وعمار: الرجولة الإيجابية والتماسك الأسري</div>
+            <div>صفحة 02</div>
+        </div>
+    </div>
+</body>
+</html>

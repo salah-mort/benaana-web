@@ -1,0 +1,100 @@
+{
+  "project_info": {
+    "title": "سند وعمار: مقترح شراكة استراتيجية لبناء التماسك الأسري في غزة",
+    "created": 1786538386.261,
+    "last_updated": 1786538978.762,
+    "total_slides": 8
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "context",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "impact_goals",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "tracks",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "plan",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "budget",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "risks",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "call_to_action",
+      "state": "edited",
+      "pageNum": 8
+    }
+  ],
+  "outline": [
+    {
+      "id": "cover",
+      "title": "سند وعمار: مقترح شراكة استراتيجية لبناء التماسك الأسري في غزة",
+      "summary": "شريحة الغلاف التي تعرض عنوان المبادرة وفلسفتها الأساسية القائمة على الرعاية والرحمة في بيئات النزوح.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "context",
+      "title": "السياق الإنساني والتحدي الميداني في بيئات النزوح بالقطاع",
+      "summary": "تحليل للضغوط النفسية والاجتماعية التي تواجه الرجال والشباب في غزة والحاجة لبرامج دعم نوعية.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "impact_goals",
+      "title": "الأهداف الاستراتيجية ومؤشرات الأثر الملموس للمبادرة",
+      "summary": "عرض لأهداف المبادرة في تخفيف الضغط الأسري وبناء وعي 500 مستفيد وتحقيق وصول رقمي واسع.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "tracks",
+      "title": "المسارات الثلاثة: ديوان السند، أعمدة البيت، وشريكات الوعي",
+      "summary": "تفصيل للمسارات الموجهة للرجال والشباب، والأسر، والصبايا لضمان تكامل الأثر المجتمعي.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "plan",
+      "title": "خطة العمل التنفيذية الموزعة على ثمانية أسابيع ميدانية",
+      "summary": "خارطة طريق زمنية تبدأ من التأسيس والتهيئة وصولاً للتقييم الختامي وتخريج سفراء السند.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "budget",
+      "title": "الشفافية المالية وتوزيع ميزانية المبادرة البالغة 4,000 دولار",
+      "summary": "جدول تفصيلي يوضح كيفية صرف الميزانية على التيسير الميداني والحملة الرقمية واللوجستيات. Israely Shekels will be converted if needed but USD is the primary.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "risks",
+      "title": "المرونة الميدانية وإدارة المخاطر في الظروف الطارئة بالقطاع",
+      "summary": "شرح لبروتوكولات الحماية والبدائل الرقمية واللامركزية لضمان استمرارية النشاط رغم التحديات.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "call_to_action",
+      "title": "دعوة للشراكة الاستراتيجية: خيط واحد يربط البيوت ببعضها البعض",
+      "summary": "الخاتمة وطلب الشراكة لدعم صمود المجتمع الغزي من خلال بناء وعي الإنسان وتماسك أسرته.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}
