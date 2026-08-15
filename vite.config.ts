@@ -150,7 +150,17 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// Manus tooling (preview runtime + JSX element locator) inlines a ~350 kB overlay
+// into index.html. It only does anything inside the Manus editor, so we drop it on
+// Vercel builds — where VERCEL=1 is always set — and keep it everywhere else.
+const isVercelBuild = Boolean(process.env.VERCEL);
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  ...(isVercelBuild ? [] : [jsxLocPlugin(), vitePluginManusRuntime()]),
+  vitePluginManusDebugCollector(),
+];
 
 export default defineConfig({
   plugins,
