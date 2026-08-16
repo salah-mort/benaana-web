@@ -37,8 +37,7 @@ import {
   X,
 } from "lucide-react";
 
-// الصور مرفوعة داخل client/public/img لتُخدم كملفات ثابتة مع البناء،
-// بدل مسار /manus-storage الذي يعتمد على وسيط تخزين غير متاح خارج بيئة Manus.
+// الصور داخل client/public/img لتُخدم كملفات ثابتة مع البناء.
 const logoUrl = "/img/logo_7c90ce14.png";
 const heroImage = "/img/binna-cover-2026_d4940ad9.png";
 const familyImage = "/img/hero-banner_e1f3d1bd.png";

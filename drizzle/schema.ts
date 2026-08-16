@@ -19,7 +19,7 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 /**
- * File metadata for the S3-backed Manus storage layer.
+ * File metadata for the S3-backed storage layer.
  * File bytes stay in storage; the database keeps only ownership and references.
  */
 export const storedFiles = mysqlTable("stored_files", {

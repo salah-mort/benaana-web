@@ -20,7 +20,7 @@ vi.mock("./db", () => ({
 }));
 
 vi.mock("./storage", () => ({
-  storagePut: vi.fn(async (key: string) => ({ key, url: `/manus-storage/${key}` })),
+  storagePut: vi.fn(async (key: string) => ({ key, url: `/file-storage/${key}` })),
 }));
 
 import { appRouter } from "./routers";
@@ -32,7 +32,7 @@ function contextFor(id: number): TrpcContext {
       openId: `user-${id}`,
       email: `user-${id}@example.com`,
       name: `User ${id}`,
-      loginMethod: "manus",
+      loginMethod: "oauth",
       role: "user",
       createdAt: new Date(),
       updatedAt: new Date(),
